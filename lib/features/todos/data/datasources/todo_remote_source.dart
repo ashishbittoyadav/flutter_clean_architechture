@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'package:dio/dio.dart';
 import '../models/todo_model.dart';
 
@@ -6,7 +5,7 @@ abstract class TodoRemoteSource {
   Future<List<TodoModel>> getTodos();
   Future<TodoModel> addTodo(TodoModel todo);
   Future<TodoModel> updateTodo(TodoModel todo);
-  Future<void> deleteTodo(Int id);
+  Future<void> deleteTodo(int id);
 }
 
 class TodoRemoteSourceImpl implements TodoRemoteSource{
@@ -20,7 +19,7 @@ class TodoRemoteSourceImpl implements TodoRemoteSource{
   }
 
   @override
-  Future<void> deleteTodo(Int id) async{
+  Future<void> deleteTodo(int id) async{
     Future.delayed(Duration(seconds: 2));
   }
 

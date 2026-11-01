@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_bloc.dart';
 import 'package:flutter_architecture_poc/router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'features/auth/presentation/bloc/auth_bloc.dart';
 import 'injection_container.dart' as di;
@@ -20,24 +22,40 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider<AuthBloc>(
-          create: (_) => di.sl<AuthBloc>(),
-        ),
-        BlocProvider<TodoBloc>(
-          create: (_) => di.sl<TodoBloc>(),
-        ),
-      ],
-      child: Builder(builder: (context) {
-        final authBloc = context.read<AuthBloc>();
-        final appRouter = AppRouter(authBloc: authBloc);
-        return MaterialApp.router(
-          title: 'Simple Demo',
-          routerConfig: appRouter.router,
-          debugShowCheckedModeBanner: false,
-        );
-      }),
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      minTextAdapt: true,
+        builder: (context,child) {
+          return MultiBlocProvider(
+            providers: [
+              BlocProvider<AuthBloc>(
+                create: (_) => di.sl<AuthBloc>(),
+              ),
+              BlocProvider<TodoBloc>(
+                create: (_) => di.sl<TodoBloc>(),
+              ),
+            ],
+            child: Builder(builder: (context) {
+              final authBloc = context.read<AuthBloc>();
+              final appRouter = AppRouter(authBloc: authBloc);
+              return MaterialApp.router(
+                theme: ThemeData(
+                  textTheme: TextTheme(
+                    displayLarge: GoogleFonts.interTextTheme().displayLarge,
+                    displayMedium: GoogleFonts.interTextTheme().displayMedium,
+                    displaySmall: GoogleFonts.interTextTheme().displaySmall,
+                    labelLarge: GoogleFonts.interTextTheme().labelLarge,
+                    labelMedium: GoogleFonts.interTextTheme().labelMedium,
+                    labelSmall: GoogleFonts.interTextTheme().labelSmall,
+                  )
+                ),
+                title: 'Simple Demo',
+                routerConfig: appRouter.router,
+                debugShowCheckedModeBanner: false,
+              );
+            }),
+          );
+        }
     );
   }
 }

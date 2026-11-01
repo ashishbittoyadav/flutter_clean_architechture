@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter_architecture_poc/core/error/failures.dart';
@@ -17,7 +16,7 @@ class TodoRepositoryImpl implements TodosRepository{
   }
 
   @override
-  Future<Either<Failure, bool>> deleteToDo({required Int id}) {
+  Future<Either<Failure, bool>> deleteToDo({required int id}) {
     throw UnimplementedError();
   }
 
@@ -34,7 +33,7 @@ class TodoRepositoryImpl implements TodosRepository{
   }
 
   @override
-  Future<Either<Failure, ToDoEntity>> updateToDo({required Int id}) {
+  Future<Either<Failure, ToDoEntity>> updateToDo({required int id}) {
     throw UnimplementedError();
   }
 

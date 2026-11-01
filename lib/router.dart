@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_architecture_poc/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:flutter_architecture_poc/features/auth/presentation/bloc/auth_state.dart';
+import 'package:flutter_architecture_poc/features/blink_capture/presentation/blink_capture_screen.dart';
 import 'package:flutter_architecture_poc/features/todos/presentation/pages/sliver_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -43,10 +44,14 @@ class AppRouter{
             return const SplashPage();
           }),
           GoRoute(path: '/login',builder: (context,state){
-            return const LoginPage();
+            return const BlinkCaptureScreen();
+            // return const LoginPage();
           }),
           GoRoute(path: '/home',builder: (context,state){
             return const HomePage();
+          }),
+          GoRoute(path: '/live_photo',builder: (context,state){
+            return const BlinkCaptureScreen();
           }),
           GoRoute(path: '/todos',
             builder: (context, state) {
