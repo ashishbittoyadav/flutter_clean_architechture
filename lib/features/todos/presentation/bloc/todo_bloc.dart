@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:flutter_architecture_poc/core/usecases/usecase.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/usecases/create_to_do_use_case.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/usecases/delete_to_do_use_case.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/usecases/fetch_todo_use_case.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_event.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tarot_magic_by_chitra_222/features/todos/presentation/bloc/todo_event.dart';
+import 'package:tarot_magic_by_chitra_222/features/todos/presentation/bloc/todo_state.dart';
 
+import '../../../../core/usecases/usecase.dart';
+import '../../domain/usecases/create_to_do_use_case.dart';
+import '../../domain/usecases/delete_to_do_use_case.dart';
+import '../../domain/usecases/fetch_todo_use_case.dart';
 import '../../domain/usecases/update_to_do_use_case.dart';
 
 class TodoBloc extends Bloc<TodoEvent, TodoState> {

@@ -1,9 +1,10 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-import 'package:flutter_architecture_poc/features/todos/data/datasources/todo_remote_source.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/entity/to_do_entity.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/repository/todos_repository.dart';
+
+import '../../../../core/error/failures.dart';
+import '../../domain/entity/to_do_entity.dart';
+import '../../domain/repository/todos_repository.dart';
+import '../datasources/todo_remote_source.dart';
 
 class TodoRepositoryImpl implements TodosRepository{
   final TodoRemoteSource todoRemoteSource;

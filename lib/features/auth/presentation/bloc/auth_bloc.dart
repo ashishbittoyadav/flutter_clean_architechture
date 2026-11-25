@@ -1,14 +1,13 @@
 import 'dart:async';
 
 import 'package:chirp/chirp.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-import 'package:flutter_architecture_poc/core/usecases/usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/get_current_user_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/is_authenticated_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/login_usecase.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../core/error/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../../domain/usecases/get_current_user_usecase.dart';
+import '../../domain/usecases/is_authenticated_usecase.dart';
+import '../../domain/usecases/login_usecase.dart';
 import '../../domain/usecases/logout_usecase.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';

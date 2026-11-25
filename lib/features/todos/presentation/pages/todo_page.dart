@@ -1,10 +1,10 @@
 import 'package:chirp/chirp.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_bloc.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../bloc/todo_bloc.dart';
 import '../bloc/todo_event.dart';
+import '../bloc/todo_state.dart';
 
 class TodoPage extends StatefulWidget {
   const TodoPage({super.key});

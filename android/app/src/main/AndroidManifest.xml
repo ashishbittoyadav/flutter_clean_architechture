@@ -11,7 +11,7 @@
 
     <application
         android:allowBackup="false"
-        android:label="flutter_architechture_poc"
+        android:label="Tarot Magic by Chitra 222"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,5 +1,6 @@
-import 'package:flutter_architecture_poc/core/error/exceptions.dart';
-import 'package:flutter_architecture_poc/features/auth/data/models/user_model.dart';
+
+import '../../../../core/error/exceptions.dart';
+import '../models/user_model.dart';
 
 abstract class AuthRemoteDataSource{
   Future<UserModel> login(String email,String password);

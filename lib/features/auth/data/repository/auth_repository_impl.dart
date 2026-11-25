@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_architecture_poc/core/error/exceptions.dart';
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-import 'package:flutter_architecture_poc/features/auth/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_architecture_poc/features/auth/data/datasources/auth_remote_datasource.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/entity/user_entity.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/repository/auth_repository.dart';
+
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failures.dart';
+import '../../domain/entity/user_entity.dart';
+import '../../domain/repository/auth_repository.dart';
+import '../datasources/auth_local_datasource.dart';
+import '../datasources/auth_remote_datasource.dart';
 
 class AuthRepositoryImpl implements AuthRepository{
   final AuthRemoteDataSource authRemoteDataSource;

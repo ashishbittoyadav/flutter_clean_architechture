@@ -1,12 +1,12 @@
 import 'package:chirp/chirp.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_bloc.dart';
-import 'package:flutter_architecture_poc/router.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tarot_magic_by_chitra_222/router.dart';
 
 import 'features/auth/presentation/bloc/auth_bloc.dart';
+import 'features/todos/presentation/bloc/todo_bloc.dart';
 import 'injection_container.dart' as di;
 
 void main() async {
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                     labelSmall: GoogleFonts.interTextTheme().labelSmall,
                   )
                 ),
-                title: 'Simple Demo',
+                title: 'Tarot-Chitra-222',
                 routerConfig: appRouter.router,
                 debugShowCheckedModeBanner: false,
               );

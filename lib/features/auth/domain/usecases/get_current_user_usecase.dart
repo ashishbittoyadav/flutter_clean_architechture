@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_architecture_poc/core/usecases/usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/entity/user_entity.dart';
 
 import '../../../../core/error/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../entity/user_entity.dart';
 import '../repository/auth_repository.dart';
 
 class GetCurrentUserUseCase implements UseCase<UserEntity?,NoParams>{

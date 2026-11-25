@@ -1,4 +1,5 @@
-import 'package:flutter_architecture_poc/features/auth/domain/entity/user_entity.dart';
+
+import '../../domain/entity/user_entity.dart';
 
 class UserModel extends UserEntity{
   const UserModel({required super.id, required super.name, required super.email});

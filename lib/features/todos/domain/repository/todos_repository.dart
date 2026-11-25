@@ -1,7 +1,7 @@
 
 import 'package:dartz/dartz.dart';
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/entity/to_do_entity.dart';
+import '../../../../core/error/failures.dart';
+import '../entity/to_do_entity.dart';
 
 abstract class TodosRepository {
   Future<Either<Failure,List<ToDoEntity>>> fetchTodos();

@@ -1,11 +1,12 @@
 import 'dart:convert';
 
-import 'package:flutter_architecture_poc/features/auth/data/models/user_model.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:local_auth_android/local_auth_android.dart';
 import 'package:local_auth_darwin/types/auth_messages_ios.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../models/user_model.dart';
 
 abstract class AuthLocalDataSource {
   Future<void> cacheToken(String token);

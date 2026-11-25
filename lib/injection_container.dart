@@ -1,26 +1,26 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_architecture_poc/features/auth/data/datasources/auth_local_datasource.dart';
-import 'package:flutter_architecture_poc/features/auth/data/datasources/auth_remote_datasource.dart';
-import 'package:flutter_architecture_poc/features/auth/data/repository/auth_repository_impl.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/repository/auth_repository.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/get_current_user_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/is_authenticated_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/login_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/domain/usecases/logout_usecase.dart';
-import 'package:flutter_architecture_poc/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:flutter_architecture_poc/features/todos/data/datasources/todo_remote_source.dart';
-import 'package:flutter_architecture_poc/features/todos/data/repository/todo_repository_impl.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/repository/todos_repository.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/usecases/create_to_do_use_case.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/bloc/todo_bloc.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'features/auth/data/datasources/auth_local_datasource.dart';
+import 'features/auth/data/datasources/auth_remote_datasource.dart';
+import 'features/auth/data/repository/auth_repository_impl.dart';
+import 'features/auth/domain/repository/auth_repository.dart';
+import 'features/auth/domain/usecases/get_current_user_usecase.dart';
+import 'features/auth/domain/usecases/is_authenticated_usecase.dart';
+import 'features/auth/domain/usecases/login_usecase.dart';
+import 'features/auth/domain/usecases/logout_usecase.dart';
+import 'features/auth/presentation/bloc/auth_bloc.dart';
+import 'features/todos/data/datasources/todo_remote_source.dart';
+import 'features/todos/data/repository/todo_repository_impl.dart';
+import 'features/todos/domain/repository/todos_repository.dart';
+import 'features/todos/domain/usecases/create_to_do_use_case.dart';
 import 'features/todos/domain/usecases/delete_to_do_use_case.dart';
 import 'features/todos/domain/usecases/fetch_todo_use_case.dart';
 import 'features/todos/domain/usecases/update_to_do_use_case.dart';
+import 'features/todos/presentation/bloc/todo_bloc.dart';
 
 final sl = GetIt.instance;
 

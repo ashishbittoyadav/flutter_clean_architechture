@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-
+import '../../../../core/error/failures.dart';
 import '../../../../core/usecases/usecase.dart';
 import '../repository/auth_repository.dart';
 

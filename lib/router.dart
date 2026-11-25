@@ -1,17 +1,16 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_architecture_poc/features/auth/presentation/bloc/auth_bloc.dart';
-import 'package:flutter_architecture_poc/features/auth/presentation/bloc/auth_state.dart';
-import 'package:flutter_architecture_poc/features/blink_capture/presentation/blink_capture_screen.dart';
-import 'package:flutter_architecture_poc/features/todos/presentation/pages/sliver_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import 'features/auth/presentation/bloc/auth_bloc.dart';
+import 'features/auth/presentation/bloc/auth_state.dart';
 import 'features/auth/presentation/pages/home_page.dart';
-import 'features/auth/presentation/pages/login_page.dart';
 import 'features/auth/presentation/pages/splash_page.dart';
+import 'features/blink_capture/presentation/blink_capture_screen.dart';
 import 'features/todos/presentation/bloc/todo_bloc.dart';
+import 'features/todos/presentation/pages/sliver_screen.dart';
 import 'features/todos/presentation/pages/todo_page.dart';
 import 'injection_container.dart' as di;
 

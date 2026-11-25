@@ -1,9 +1,10 @@
 
 
 import 'package:dartz/dartz.dart';
-import 'package:flutter_architecture_poc/core/error/failures.dart';
-import 'package:flutter_architecture_poc/core/usecases/usecase.dart';
-import 'package:flutter_architecture_poc/features/todos/domain/repository/todos_repository.dart';
+
+import '../../../../core/error/failures.dart';
+import '../../../../core/usecases/usecase.dart';
+import '../repository/todos_repository.dart';
 
 class DeleteToDoUseCase implements UseCase<bool,int>{
   final TodosRepository todosRepository;
